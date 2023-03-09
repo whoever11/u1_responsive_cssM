@@ -53,13 +53,15 @@ We are creating a new block of scope with this, which means we can change up any
 ```
 @media screen and (max-width: 800px) {
 
-body {
-background-color: aqua;
+  body {
+     background-color: aqua;
+  }
+
+
+  h1 {
+    font-size: 20px;
+  }
 }
-
-
-h1 {
-font-size: 20px;
 ````
 
 We can run multiple media queries with breakpoints, but just know that the order of numbers will matter due to the Cascading nature of CSS. Having a Max-width of 500 under a Max-width of 300 is not going to do what you want it to do!
@@ -71,23 +73,21 @@ Its not just things like colors and fonts that can change. Lets create a Nav ele
 
 ```
 
-
-
 @media screen and (max-width: 800px) {
 
-body {
-background-color: aqua;
-}
+  body {
+    background-color: aqua;
+  }
 
-nav{
-display: flex
-}
+  nav{
+    display: flex
+  }
 }
 
 @media screen and (max-width: 500px) {
-nav {
-flex-direction: column
-}
+  nav {
+    flex-direction: column
+  }
 }
 ````
 
@@ -95,3 +95,21 @@ Notice how the "display: flex" will still be inherited into the smaller block at
 
 
 There are many different ways to play with responsive code. Changing font sizes, Flex Directions, Grid Columns, and setting larger elements to have a display of "none" while in small sizes are just a few of the different things we can do. Play around, look at existing pages you can work off of, and challenge yourself to create professional looking, responsive web pages!
+
+Lets throw 2 images in our html with Id's of "image1" and "image2". Give one a display of "block", and the other "none" in the main CSS scope. Then put this in your CSS and watch what happens as one image vanishes, and the other appears in its place!
+
+
+
+
+```
+@media screen and (max-width: 500px) {
+  #image1 {
+    display: none
+  }
+  
+  
+  #image2 {
+    display: block
+  }
+}
+```
