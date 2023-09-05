@@ -45,6 +45,7 @@ The main code we want to use in our CSS looks something like this:
 
 To experiment with responsive design, open up a new HTML/CSS file and paste the following HTML into the body:
 
+```html
 <body>
 
   <header>
@@ -58,13 +59,16 @@ To experiment with responsive design, open up a new HTML/CSS file and paste the 
   </nav>
 
   <div>
+    <img id="dog1" src="./assets/dog1.jpeg">
+    <img id="dog2 src="./assets/dog2.jpeg">
+
 
     
   </div>
 
   
 </body>
-
+```
 
 
 
