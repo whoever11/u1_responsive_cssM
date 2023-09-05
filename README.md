@@ -160,97 +160,7 @@ A media query contains its own section of CSS that is used to modify the current
 
 The media query can be composed of any number of _media feature expressions_, such as `(min-width: 768px)`, and optional _media types_, such as `print`, `screen`, or `all`.
 
-### Our First Media Query
 
-Let's add a media query to improve our current layout for devices **larger** than mobile.
-
-The following conditionally adds CSS as the screen increases in width, to at least 768 pixels - typically considered a common "breakpoint" width for tablets:
-
-```css
-@media only screen and (min-width: 768px) {
-  body {
-    background-color: red
-  }
-}
-```
-
-Note that we only add CSS declarations for the properties we want to change - Don't repeat any of the CSS **above** the media query.
-
-Resize the window and check it out!
-
-### Order May Matter
-
-Be sure to put media queries **after** the "base" CSS rules in the stylesheet.
-
-Also, the ordering of the media queries themselves may matter. For example:
-
-```css
-/* Base CSS */
-* {
-  color: red;
-}
-
-/* Desktop Device CSS */
-@media (min-width: 1024px) {
-  * {
-    color: green;
-  }
-}
-
-/* Tablet Device CSS */
-@media (min-width: 768px) {
-  * {
-    color: blue;
-  }
-}
-```
-
-❓ Do you see why there can never be any green text?
-
-
-
-
-### Adding More :
-
-Lets change up our Navbar to be spaced out according to our size, and then change the display types of our images, so that we only see the ones we want at certain sizes!
-
-```CSS
-#image1 {
-display: block}
-#image2 {
-display: none}
-```
-
-And convert it to this:
-
-```CSS
-#image1 {
-display: none}
-#image2 {
-display: block}
-```
-
-### 👉 YOU DO - Media Query (5 min)
-
-- Add another media query with a breakpoint of `(min-width: 1024px)` (a common breakpoint width for desktop displays).
-
-- Within the media query, add some CSS to change the `color` property of at least one element.
-
-- Within the media query, add some CSS to change the `background-color` property of at least one element.
-
-<hr>
-
-Let's wrap up with a few review questions...
-
-
-## 8. References
-
-[MDN - Using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-
-[MDN - grid-template-areas](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas)
-
-
-We can change up these values based of what sized devices we are expecting users to use.
 
 
 ## Standard breakpoints and widths
@@ -330,20 +240,46 @@ Notice how the "display: flex" will still be inherited into the smaller block at
 
 There are many different ways to play with responsive code. Changing font sizes, Flex Directions, Grid Columns, and setting larger elements to have a display of "none" while in small sizes are just a few of the different things we can do. Play around, look at existing pages you can work off of, and challenge yourself to create professional looking, responsive web pages!
 
-Lets throw 2 images in our html with Id's of "image1" and "image2". Give one a display of "block", and the other "none" in the main CSS scope. Then put this in your CSS and watch what happens as one image vanishes, and the other appears in its place!
 
+### Adding More :
 
+Lets change up our Navbar to be spaced out according to our size, and then change the display types of our images, so that we only see the ones we want at certain sizes!
 
-
-```
-@media screen and (max-width: 500px) {
-  #image1 {
-    display: none
-  }
-  
-  
-  #image2 {
-    display: block
-  }
+```CSS
+#dog1 {
+display: block
+}
+#dog2 {
+display: none
 }
 ```
+
+And convert it to this:
+
+```CSS
+#dog1 {
+display: none
+}
+#dog2 {
+display: block
+}
+```
+
+### 👉 YOU DO - Media Query (5 min)
+
+- Add another media query with a breakpoint of `(min-width: 1024px)` (a common breakpoint width for desktop displays).
+
+- Within the media query, add some CSS to change the `color` property of at least one element.
+
+- Within the media query, add some CSS to change the `background-color` property of at least one element.
+
+<hr>
+
+
+## 8. References
+
+[MDN - Using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+
+[MDN - grid-template-areas](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas)
+
+
