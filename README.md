@@ -276,6 +276,9 @@ display: block
 <hr>
 
 
+<img src ="./assets/MediaBreakpoints.jpeg">
+
+
 ## 8. References
 
 [MDN - Using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
