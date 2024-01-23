@@ -61,9 +61,6 @@ To experiment with responsive design, open up a new HTML/CSS file and paste the 
   <div>
     <img id="dog1" src="./assets/dog1.jpeg">
     <img id="dog2 src="./assets/dog2.jpeg">
-
-
-    
   </div>
 
   
